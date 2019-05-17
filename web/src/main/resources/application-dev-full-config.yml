@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:13306/test
+    username: test_user
+    password: Das_ist_g3hEIm
+  jpa:
+    generate-ddl: true
+    mapping-resources:
+      - hbm/user.xml
+
+    properties:
+      hibernate:
+        id:
+          new_generator_mappings: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

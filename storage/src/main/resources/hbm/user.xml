@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "classpath://org/hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="de.mbur.acme">
+	<class name="User">
+		<id name="id">
+			<generator class="identity" />
+		</id>
+		<property name="created" update="false" insert="false" generated="insert">
+			<column name="created" not-null="true" sql-type="timestamp" default="CURRENT_TIMESTAMP" />
+		</property>
+		<property name="username" not-null="true" unique="true" />
+		<property name="email" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,41 @@
+acme:
+  file_resources: c:\Data\acme
+
+logging:
+  level:
+    de.mbur.acme: debug
+
+server:
+  compression:
+    enabled: true
+    mime-types:
+      - application/javascript
+      - application/json
+      - text/css
+      - text/html
+      - text/javascript
+      - text/plain
+      - text/xml
+    min-response-size: 1024
+  http2:
+    enabled: true
+  servlet:
+    context-path: /acme
+
+spring:
+  # PROFILES
+  profiles:
+    active: ${profile:dev-full-config}
+
+  resources:
+    cache:
+      cachecontrol:
+        cache-public: true
+        max-age: 86400
+        must-revalidate: true
+  servlet:
+    multipart:
+      file-size-threshold: 1MB
+      location: ${acme.file_resources}\tmp
+      max-file-size: 50MB
+      max-request-size: 51MB

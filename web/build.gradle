@@ -1,0 +1,16 @@
+plugins {
+	id 'war'
+}
+
+dependencies {
+	implementation project(':api'),
+			'org.springframework.boot:spring-boot-starter-web'
+
+	runtime project(':storage')
+
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+}
+
+war {
+	enabled = true
+}
