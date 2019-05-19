@@ -12,5 +12,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-#    hibernate:
+    show-sql: true
+
+#    hbm:
 #      ddl-auto: create-drop

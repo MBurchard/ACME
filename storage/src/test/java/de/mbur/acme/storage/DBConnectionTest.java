@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class DBConnectionTest {
 	private static final Logger LOG = LoggerFactory.getLogger(DBConnectionTest.class);
 
-	@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection") @Inject
+	@Inject
 	private DataSource dataSource;
 
 	@Test

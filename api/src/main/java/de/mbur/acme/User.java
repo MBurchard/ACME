@@ -39,4 +39,15 @@ public class User {
 	public void setUsername(final String username) {
 		this.username = username;
 	}
+
+	@Override
+	public String toString() {
+		final StringBuilder sb = new StringBuilder("User{");
+		sb.append("created=").append(created);
+		sb.append(", email='").append(email).append('\'');
+		sb.append(", id=").append(id);
+		sb.append(", username='").append(username).append('\'');
+		sb.append('}');
+		return sb.toString();
+	}
 }

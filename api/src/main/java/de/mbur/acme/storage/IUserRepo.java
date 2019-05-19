@@ -1,4 +1,5 @@
 package de.mbur.acme.storage;
 
-public interface IUserRepo {
-}
+import de.mbur.acme.User;
+
+public interface IUserRepo extends ICrudRepo<User> {}

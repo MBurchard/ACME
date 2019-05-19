@@ -25,7 +25,7 @@ server:
 spring:
   # PROFILES
   profiles:
-    active: ${profile:dev-full-config}
+    active: ${profile:dev}
 
   resources:
     cache:
